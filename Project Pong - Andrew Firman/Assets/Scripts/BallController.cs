@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public Vector2 speed;
+    [SerializeField] private Vector2 speed = new Vector2(1, 1);
     // Start is called before the first frame update
     void Start()
     {

@@ -14,6 +14,6 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transform.position = transform.position + new Vector3(0.1f, 0, 0);
+        transform.Translate(speed * Time.deltaTime);
     }
 }

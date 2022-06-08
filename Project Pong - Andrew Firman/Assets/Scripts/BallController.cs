@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    [SerializeField] private Vector2 speed = new Vector2(3, 3);
+    [SerializeField] private Vector2 speed = new Vector2(4, 4);
     private Rigidbody2D rig;
 
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        rig.velocity = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        rig.velocity= speed;
+        
     }
 }

@@ -6,7 +6,7 @@ public class PaddleController : MonoBehaviour
 {
     [SerializeField] private KeyCode upKey = KeyCode.W;
     [SerializeField] private KeyCode downKey = KeyCode.S;
-    [SerializeField] private float speed_modifier = 1;
+    [SerializeField] private float speed_modifier = 3;
 
     // Start is called before the first frame update
     void Start()

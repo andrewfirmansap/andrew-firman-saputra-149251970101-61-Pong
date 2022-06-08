@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 1173897757}
   - component: {fileID: 1173897756}
   - component: {fileID: 1173897758}
+  - component: {fileID: 1173897759}
   m_Layer: 0
   m_Name: Paddle_P1
   m_TagString: Untagged
@@ -515,6 +516,27 @@ MonoBehaviour:
   upKey: 119
   downKey: 115
   speed_modifier: 3
+--- !u!50 &1173897759
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173897755}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1209027176
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +684,7 @@ GameObject:
   - component: {fileID: 1235925810}
   - component: {fileID: 1235925809}
   - component: {fileID: 1235925811}
+  - component: {fileID: 1235925812}
   m_Layer: 0
   m_Name: Paddle_P2
   m_TagString: Untagged
@@ -749,6 +772,27 @@ MonoBehaviour:
   upKey: 273
   downKey: 274
   speed_modifier: 3
+--- !u!50 &1235925812
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235925808}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2029680425
 GameObject:
   m_ObjectHideFlags: 0

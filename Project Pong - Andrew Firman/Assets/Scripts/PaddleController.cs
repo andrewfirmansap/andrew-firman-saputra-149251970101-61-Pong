@@ -7,11 +7,11 @@ public class PaddleController : MonoBehaviour
     [SerializeField] private KeyCode upKey = KeyCode.W;
     [SerializeField] private KeyCode downKey = KeyCode.S;
     [SerializeField] private float speed_modifier = 3;
-
+    private Rigidbody2D rig;
     // Start is called before the first frame update
     void Start()
     {
-
+        rig = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,6 +36,6 @@ public class PaddleController : MonoBehaviour
     }
     private void MoveObject(Vector2 movement)
     {
-        transform.Translate(movement * Time.deltaTime);
+        rig.velocity= (movement);
     }
 }

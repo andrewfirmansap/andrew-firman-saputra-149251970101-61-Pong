@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 496714296}
   - component: {fileID: 496714295}
   - component: {fileID: 496714297}
+  - component: {fileID: 496714298}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -218,7 +219,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9312064f1d176db448e1f629c6b90fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 1, y: 1}
+  speed: {x: 3, y: 3}
+--- !u!50 &496714298
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496714294}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upKey: 119
   downKey: 115
-  speed_modifier: 1
+  speed_modifier: 3
 --- !u!1 &1209027176
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1214078792}
+  - component: {fileID: 1214078793}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -607,6 +630,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1214078793
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214078791}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1235925808
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upKey: 273
   downKey: 274
-  speed_modifier: 1
+  speed_modifier: 3
 --- !u!1 &2029680425
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class BallController : MonoBehaviour
 {
     [SerializeField] private Vector2 speed = new Vector2(4, 4);
     private Rigidbody2D rig;
-    [SerializeField] private Vector2 resetPosition = new Vector2(0, 0);
+    [SerializeField] private Vector3 resetPosition = new Vector3(0, 1.4f, 2f);
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +23,6 @@ public class BallController : MonoBehaviour
     public void ResetBall()
     {
         transform.position = resetPosition;
+        rig.velocity = -rig.velocity;
     }
 }

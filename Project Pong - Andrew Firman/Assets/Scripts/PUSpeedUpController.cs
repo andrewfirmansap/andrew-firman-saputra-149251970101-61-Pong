@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class PUSpeedUpController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Collider2D ball;
+    public float magnitude;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision == ball)
+        {
+            ball.GetComponent<BallController>().ActivePUSpeedUp(magnitude);
+            Destroy(gameObject);
+        }
     }
 }

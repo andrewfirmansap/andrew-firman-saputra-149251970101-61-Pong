@@ -25,4 +25,8 @@ public class BallController : MonoBehaviour
         transform.position = resetPosition;
         rig.velocity = -rig.velocity;
     }
+    public void ActivePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
+    }
 }

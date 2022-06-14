@@ -1584,6 +1584,7 @@ MonoBehaviour:
   - {fileID: 2046576408}
   spawnArea: {fileID: 1510252120}
   spawnInterval: 30
+  deleteInterval: 45
 --- !u!1 &2029680425
 GameObject:
   m_ObjectHideFlags: 0

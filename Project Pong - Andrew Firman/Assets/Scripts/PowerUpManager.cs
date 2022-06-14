@@ -38,10 +38,10 @@ public class PowerUpManager : MonoBehaviour
         {
             return;
         }
-        if(position.x > powerUpAreaMin.x || 
-           position.x < powerUpAreaMax.x ||
-           position.y > powerUpAreaMin.y ||
-           position.y < powerUpAreaMax.y
+        if(position.x < powerUpAreaMin.x || 
+           position.x > powerUpAreaMax.x ||
+           position.y < powerUpAreaMin.y ||
+           position.y > powerUpAreaMax.y
              )
         {
             return;

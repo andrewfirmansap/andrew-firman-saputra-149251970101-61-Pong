@@ -1137,6 +1137,8 @@ MonoBehaviour:
   speed_modifier: 5
   ball: {fileID: 496714299}
   manager: {fileID: 1590579572}
+  timeLimitSpeedup: 5
+  timeLimitPanjangup: 5
 --- !u!50 &1173897759
 Rigidbody2D:
   serializedVersion: 4
@@ -1453,6 +1455,8 @@ MonoBehaviour:
   downKey: 274
   speed_modifier: 5
   ball: {fileID: 496714299}
+  timeLimitSpeedup: 5
+  timeLimitPanjangup: 5
   manager: {fileID: 1590579572}
 --- !u!50 &1235925812
 Rigidbody2D:
@@ -1867,8 +1871,8 @@ MonoBehaviour:
   paddle1Obj: {fileID: 1173897755}
   paddle2Obj: {fileID: 1235925808}
   spawnArea: {fileID: 1510252120}
-  spawnInterval: 1
-  deleteInterval: 45
+  spawnInterval: 2
+  deleteInterval: 5
 --- !u!1 &1975836779
 GameObject:
   m_ObjectHideFlags: 0

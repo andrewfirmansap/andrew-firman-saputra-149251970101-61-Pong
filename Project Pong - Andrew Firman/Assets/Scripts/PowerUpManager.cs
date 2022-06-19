@@ -90,22 +90,20 @@ public class PowerUpManager : MonoBehaviour
         }
     }
     public void PerpanjangPaddle()
-    {
+    {   
         if (lastPaddleP1)
         {
-            Vector3 temp_scale = paddle1.transform.localScale;
-            paddle1.transform.localScale = new Vector3(temp_scale.x, 4f);
-            
+            paddle1Obj.GetComponent<PaddleController>().ActivePUPanjangUp();
+
         }
         else
         {
-            Vector3 temp_scale = paddle2.transform.localScale;
-            paddle2.transform.localScale = new Vector3(temp_scale.x, 4f);
+            paddle2Obj.GetComponent<PaddleController_P2>().ActivePUPanjangUp();
         }
     }
     public void SpeedUpPaddle()
     {
-        //Debug.Log("Speedup!");
+        Debug.Log("Speedup!");
         if (lastPaddleP1)
         {
             paddle1Obj.GetComponent<PaddleController>().ActivePUSpeedUp();

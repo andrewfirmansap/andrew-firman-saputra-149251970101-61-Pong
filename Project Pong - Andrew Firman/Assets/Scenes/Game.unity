@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &102482780
 Transform:
   m_ObjectHideFlags: 0
@@ -1855,12 +1855,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085bad721737371489ee2501b23f8836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPowerUpAmount: 5
+  maxPowerUpAmount: 10
   powerUpAreaMin: {x: -6, y: -3}
   powerUpAreaMax: {x: 6, y: 4.5}
   powerUpTemplateList:
   - {fileID: 2046576408}
   - {fileID: 1994862606}
+  - {fileID: 102482779}
   paddle1: {fileID: 1173897757}
   paddle2: {fileID: 1235925810}
   paddle1Obj: {fileID: 1173897755}

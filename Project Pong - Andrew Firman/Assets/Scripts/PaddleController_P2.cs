@@ -40,7 +40,7 @@ public class PaddleController_P2 : MonoBehaviour
     }
     private void MoveObject(Vector2 movement)
     {
-        rig.velocity = movement;
+        rig.velocity = movement*magnitude;
         //Debug.Log("Paddle 2: " + movement);
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -10,6 +10,10 @@ public class PowerUpManager : MonoBehaviour
 
     public List<GameObject> powerUpTemplateList;
     private List<GameObject> powerUpList;
+    private bool lastPaddleP1;
+
+    public Transform paddle1;
+    public Transform paddle2;
     
 
     public Transform spawnArea;
@@ -17,9 +21,15 @@ public class PowerUpManager : MonoBehaviour
     private float deleteTimer;
     public int spawnInterval;
     public int deleteInterval;
+
+
+    public int spawnIntervalPanjangPaddle;
+    public int deleteIntervalPanjangPaddle;
+
     private void Start()
     {
         powerUpList = new List<GameObject>();
+        lastPaddleP1 = true;
         
 
     }
@@ -77,5 +87,27 @@ public class PowerUpManager : MonoBehaviour
         {
             RemovePowerUp(powerUpList[0]);
         }
+    }
+    public void PerpanjangPaddle()
+    {
+        if (lastPaddleP1)
+        {
+            Vector3 temp_scale = paddle1.transform.localScale;
+            paddle1.transform.localScale = new Vector3(temp_scale.x, 4f);
+            
+        }
+        else
+        {
+            Vector3 temp_scale = paddle2.transform.localScale;
+            paddle2.transform.localScale = new Vector3(temp_scale.x, 4f);
+        }
+    }
+    public void PaddleP2Hit()
+    {
+        lastPaddleP1 = false;
+    }
+    public void PaddleP1Hit()
+    {
+        lastPaddleP1 = true;
     }
 }

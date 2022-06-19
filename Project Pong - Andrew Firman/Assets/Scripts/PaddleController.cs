@@ -8,6 +8,8 @@ public class PaddleController : MonoBehaviour
     [SerializeField] private KeyCode downKey = KeyCode.S;
     [SerializeField] private float speed_modifier = 3;
     private Rigidbody2D rig;
+    public Collider2D ball;
+    public PowerUpManager manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +40,18 @@ public class PaddleController : MonoBehaviour
     {
         rig.velocity= (movement);
         // Debug.Log("Paddle 1: "+movement);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision == ball)
+        {
+            //#ball.GetComponent<BallController>().ActivePUSpeedUp(magnitude);
+            manager.PaddleP1Hit();
+            //Debug.Log("paddle2 hit!");
+        }
+    }
+    public void ActivePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
     }
 }

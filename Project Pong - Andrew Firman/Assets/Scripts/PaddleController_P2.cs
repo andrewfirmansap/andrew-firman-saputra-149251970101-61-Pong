@@ -47,8 +47,12 @@ public class PaddleController_P2 : MonoBehaviour
         if (collision == ball)
         {
             //#ball.GetComponent<BallController>().ActivePUSpeedUp(magnitude);
-            //manager.RemovePowerUp(gameObject);
-            Debug.Log("paddle2 hit!");
+            manager.PaddleP2Hit();
+            //Debug.Log("paddle2 hit!");
         }
+    }
+    public void ActivePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
     }
 }

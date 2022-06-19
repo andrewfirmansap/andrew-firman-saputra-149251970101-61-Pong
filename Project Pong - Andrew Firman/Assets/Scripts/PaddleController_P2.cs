@@ -9,12 +9,13 @@ public class PaddleController_P2 : MonoBehaviour
     [SerializeField] private float speed_modifier = 5;
     public Collider2D ball;
     private Rigidbody2D rig;
-
+    private int magnitude;
     public PowerUpManager manager;
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        magnitude = 1;
     }
 
     // Update is called once per frame
@@ -51,8 +52,8 @@ public class PaddleController_P2 : MonoBehaviour
             //Debug.Log("paddle2 hit!");
         }
     }
-    public void ActivePUSpeedUp(float magnitude)
+    public void ActivePUSpeedUp()
     {
-        rig.velocity *= magnitude;
+        magnitude = 2;
     }
 }

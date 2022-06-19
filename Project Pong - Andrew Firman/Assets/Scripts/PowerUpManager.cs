@@ -14,7 +14,10 @@ public class PowerUpManager : MonoBehaviour
 
     public Transform paddle1;
     public Transform paddle2;
-    
+    public GameObject paddle1Obj;
+    public GameObject paddle2Obj;
+
+
 
     public Transform spawnArea;
     private float timer;
@@ -26,6 +29,7 @@ public class PowerUpManager : MonoBehaviour
     {
         powerUpList = new List<GameObject>();
         lastPaddleP1 = true;
+
         
 
     }
@@ -97,6 +101,19 @@ public class PowerUpManager : MonoBehaviour
         {
             Vector3 temp_scale = paddle2.transform.localScale;
             paddle2.transform.localScale = new Vector3(temp_scale.x, 4f);
+        }
+    }
+    public void SpeedUpPaddle()
+    {
+        //Debug.Log("Speedup!");
+        if (lastPaddleP1)
+        {
+            paddle1Obj.GetComponent<PaddleController>().ActivePUSpeedUp();
+
+        }
+        else
+        {
+            paddle2Obj.GetComponent<PaddleController_P2>().ActivePUSpeedUp();
         }
     }
     public void PaddleP2Hit()

@@ -10,10 +10,12 @@ public class PaddleController : MonoBehaviour
     private Rigidbody2D rig;
     public Collider2D ball;
     public PowerUpManager manager;
+    private int magnitude;
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        magnitude = 1;
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class PaddleController : MonoBehaviour
     }
     private void MoveObject(Vector2 movement)
     {
-        rig.velocity= (movement);
+        rig.velocity= (movement*magnitude);
         // Debug.Log("Paddle 1: "+movement);
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,8 +52,9 @@ public class PaddleController : MonoBehaviour
             //Debug.Log("paddle2 hit!");
         }
     }
-    public void ActivePUSpeedUp(float magnitude)
+    public void ActivePUSpeedUp()
     {
-        rig.velocity *= magnitude;
+        Debug.Log("Speeding up!");
+        magnitude = 2;
     }
 }

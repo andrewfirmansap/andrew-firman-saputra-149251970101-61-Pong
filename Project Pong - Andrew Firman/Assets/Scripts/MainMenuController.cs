@@ -13,7 +13,8 @@ public class MainMenuController : MonoBehaviour
     }
     public void OpenCredit()
     {
-        Debug.Log("Created by Andrew Firman");
+        //Debug.Log("Created by Andrew Firman");
+        SceneManager.LoadScene("Credit");
     }
     public void ToMainMenu()
     {

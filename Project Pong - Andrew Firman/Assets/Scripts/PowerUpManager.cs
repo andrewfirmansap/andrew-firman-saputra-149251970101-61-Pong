@@ -22,10 +22,6 @@ public class PowerUpManager : MonoBehaviour
     public int spawnInterval;
     public int deleteInterval;
 
-
-    public int spawnIntervalPanjangPaddle;
-    public int deleteIntervalPanjangPaddle;
-
     private void Start()
     {
         powerUpList = new List<GameObject>();
@@ -48,6 +44,7 @@ public class PowerUpManager : MonoBehaviour
             deleteTimer -= deleteInterval;
             RemovePowerUp(powerUpList[0]);
         }
+        
 
     }
     public void GenerateRandomPowerUp()

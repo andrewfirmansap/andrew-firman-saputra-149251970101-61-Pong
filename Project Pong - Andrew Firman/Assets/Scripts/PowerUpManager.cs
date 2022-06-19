@@ -10,6 +10,7 @@ public class PowerUpManager : MonoBehaviour
 
     public List<GameObject> powerUpTemplateList;
     private List<GameObject> powerUpList;
+    
 
     public Transform spawnArea;
     private float timer;
@@ -19,6 +20,7 @@ public class PowerUpManager : MonoBehaviour
     private void Start()
     {
         powerUpList = new List<GameObject>();
+        
 
     }
     private void Update()
